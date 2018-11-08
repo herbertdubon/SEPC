@@ -15,22 +15,22 @@
         
         die($ex->getMessage());
     }
-    $stmt=$dbcon->prepare("SELECT * FROM grupos");
+    $stmt=$dbcon->prepare("SELECT * FROM grupos ORDER BY total_cat1 desc, total_cat2 desc, total_cat3 desc, total_cat4 desc, total_cat5 desc;");
     $stmt->execute();
     $json= [];
     $json2= [];
     $json3= [];
     $json4= [];
     $json5= [];
-    while ($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
+    while ($row=$stmt->fetch(PDO::FETCH_ASSOC)) 
+    {
         extract($row);
         $json[]= $nombre_proyecto;
         $json2[]= (int)$total_cat1;
         $json3[]= (int)$total_cat2;
         $json4[]= (int)$total_cat3;
         $json5[]= (int)$total_cat4;
-        $json6[]= (int)$total_cat5;
-       
+        $json6[]= (int)$total_cat5;      
         
     }
     
@@ -59,7 +59,7 @@ var chart = new Chart(ctx, {
         labels: <?php echo json_encode($json); ?>,
         datasets: [{
             label: "Total de la categoria",
-            backgroundColor: 'lightblue',
+            backgroundColor: 'lightgreen',
             borderColor: 'red',
             hoverBackgroundColor: 'rgba(66, 134, 244, 1)',
             hoverBorderColor: 'rgba(66, 134, 244, 1)',
@@ -71,10 +71,18 @@ var chart = new Chart(ctx, {
     options: {
         scales: {
             xAxes: [{
-                stacked: true
+                stacked: true,
+                gridLines: {
+                    display:false
+                }
+                
             }],
             yAxes: [{
-                stacked: true
+                stacked: true,
+                gridLines: {
+                    display:false
+                },
+                
             }]
         }
     }

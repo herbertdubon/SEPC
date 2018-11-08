@@ -25,10 +25,10 @@ $(document).ready(function(){
 				datasets : [
 					{
 						label: 'Nombre del proyecto total',
-						backgroundColor: 'rgba(66, 244, 122, 0.75)',
-						borderColor: 'rgba(66, 244, 122, 0.75)',
-						hoverBackgroundColor: 'rgba(66, 134, 244, 1)',
-						hoverBorderColor: 'rgba(66, 134, 244, 1)',
+						backgroundColor: 'rgba(66, 134, 244, 0.75)',
+						borderColor: 'rgba(66, 134, 244, 0.75)',
+						hoverBackgroundColor: 'rgba(0, 97, 255, 1)',
+						hoverBorderColor: 'rgba(0, 97, 255, 1)',
 						data: total
 					}
 				]
