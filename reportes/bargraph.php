@@ -61,14 +61,23 @@ var chart = new Chart(ctx, {
             label: "Total de la categoria",
             backgroundColor: 'lightblue',
             borderColor: 'red',
-            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
-            hoverBorderColor: 'rgba(200, 200, 200, 1)',
+            hoverBackgroundColor: 'rgba(66, 134, 244, 1)',
+            hoverBorderColor: 'rgba(66, 134, 244, 1)',
             data: <?php echo json_encode($json2); ?>,
         }]
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
 });
 </script>
 
@@ -99,12 +108,21 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+        }
     });
 </script>
 
 <h1>Resultados de Poster Cientifico </h1>
-<div style="width: 400px; height: 200px;">
+<div style="width: 800px; height: 400px;">
 <canvas id="myChart2"></canvas>
 </div>
 
@@ -129,11 +147,20 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+        }
     });
 </script>
 <h1>Resultados de Innovacion </h1>
-<div style="width: 400px; height: 200px;">
+<div style="width: 800px; height: 400px;">
 <canvas id="myChart3"></canvas>
 </div>
 
@@ -158,12 +185,21 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+        }
     });
 </script>
 
 <h1>Resultados de Presentacion Oral </h1>
-<div style="width: 400px; height: 200px;">
+<div style="width: 800px; height: 400px;">
 <canvas id="myChart4"></canvas>
 </div>
 
@@ -188,7 +224,16 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+        }
     });
 </script>
 
