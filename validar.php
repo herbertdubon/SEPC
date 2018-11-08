@@ -18,7 +18,7 @@
 	//Verifica si el usuario existe
 	if($data != null)
 	{
-			
+		
 			
 		if($cat== "0")
 			{
@@ -59,15 +59,16 @@
 				session_start();
 				$_SESSION ['usr'] = $usuario;
 				header("location:home/p_Escrita.php");	
-			}
-			
+			}		
 		
 	  	
 	}
 	else
 	{
-		echo "nel";
-		header("location:index");	
+		echo "<script>
+                    alert('USUARIO NO ENCONTRADO. VUELVA A INTENTAR');
+                    window.location.href='index.html';
+                    </script> ";	
 
 
 	}
