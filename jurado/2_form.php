@@ -17,7 +17,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin título</title>
+<title>Formulario de Tecnologia</title>
 <style type="text/css">
 #form1 div table tr td {
 	font-family: Arial, Helvetica, sans-serif;
@@ -35,72 +35,56 @@
       <tr>
         <td height="184" colspan="4" valign="top"><img src="uees.png" width="180" height="180" /><br /> <p align="center"><strong> Evaluación de Investigación en Cátedra (IC).</strong> <br /> 
           <strong>INSTRUMENTO PARA EVALUAR LA PRESENTACIÓN ESCRITA. ARTÍCULO DE PUBLICACIÓN</strong></p>
-        <p>&nbsp;</p></td>
+         
+        
+
       </tr>
       <tr>
-        <td height="44" colspan="4">ID de grupo   <select name="id_grupo" id="id_grupo">
-          <option>Seleccione ID de grupo</option>
+        <td height="46" colspan="4">Jurado: <?php echo $_SESSION['usr'] ?></td></td> 
+      </tr>
+      <tr>
+        <td height="46" colspan="4">Categoria: 
           <?php  
-          $res=mysqli_query($link,"select * from grupos");
+           $res=mysqli_query($link,"SELECT * from jueces where usr = '$varsesion'");
+          
+           while($row=mysqli_fetch_array($res))
+                    {
+                      
+
+
+                       echo $row["nombre_categoria"];
+
+
+                   
+
+                    }         
+
+
+
+          ?>
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"><p><strong>Titulo de Investigación:  
+          <select name="nombre_proyecto" id="nombre_proyecto">
+          <option>Seleccione el nombre del proyecto</option>
+          <?php  
+          $res=mysqli_query($link,"SELECT * from grupos where total_cat1 = 0");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>
 
 
-                      <option><?php echo $row ["id_grupo"];?></option>
+                      <option><?php echo $row ["nombre_proyecto"];?></option>
 
                     <?php 
 
                     }         
                     
                     ?>  
-        </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Jurado
-          <select name="id_juez" id="id_juez">
-            <option>Seleccione al jurado</option>
-                <?php  
-          $res=mysqli_query($link,"select * from jueces");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
 
-
-                      <option><?php echo $row ["nombre_juez"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Categoria
-          <select name="id_categoria" id="id_categoria">
-            <option>Seleccione nombre de Categoria</option>
-                   <?php  
-          $res=mysqli_query($link,"select * from categorias");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
-
-
-                      <option><?php echo $row ["nombre_categoria"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-      </tr>
-      <tr>
-        <td colspan="4"><p><strong>Titulo de Investigación:</strong>
-          <label for="tx"></label>
-          <input name="tx" type="text" id="tx" size="110" />
-        </p></td>
+        </select></td> 
       </tr>
       <tr>
         <td colspan="4">Indicaciones: Asigne el puntaje que estén acordes con los criterios prescritos. (Considere que tanto cumple con lo requerido en los lineamientos UEES). Escriba observaciones cuando los puntjaes asignados sean menores de la mitad del valor.</td>

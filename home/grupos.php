@@ -177,11 +177,11 @@
 						</div>							
 						
 								<div class="form-group">
-							<a><label class="col-md-4 control-label">CIF del Juez</label></a>   
+							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>   
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<select id="cif" class="form-control">	
+									<select id="usr" class="form-control">	
 											<option>Seleccione al Juez</option>
 										<?php
 										$res=mysqli_query($link,"SELECT * from jueces;");
@@ -189,7 +189,7 @@
 										{
 										?>
 
-											<option><?php echo $row ["nombre_juez"];?></option>
+											<option><?php echo $row ["usr"];?></option>
 
 										<?php	
 
@@ -252,8 +252,8 @@
 				return false;
 			}
 		
-			else if($('#cif').val()==""){
-				alertify.alert("Falta el cif del juez");
+			else if($('#usr').val()==""){
+				alertify.alert("Falta el usuario del juez");
 				return false;
 			}
 
@@ -263,7 +263,7 @@
 					"&n3=" + $('#n3').val()+
 					"&n4=" + $('#n4').val()+
 					"&n5=" + $('#n5').val()+
-					"&cif=" + $('#cif').val();
+					"&usr=" + $('#usr').val();
 
 					$.ajax({
 						type:"POST",

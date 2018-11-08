@@ -7,12 +7,17 @@
 		echo 'Usted no tiene permiso de ver este contenido.';
 		die();
 	}
+
+
  ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 		<style type="text/css">
 			#chart-container {
 				width: 640px;
@@ -85,19 +90,20 @@
 			<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
 			<li><a href="categorias.php" class=""><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
             <li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
-            <li><a href="grupos.php" class="active"><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
+            <li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
 			<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="../jurado/2.html"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
-									<li><a href="../jurado/evaluacion.html"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-									<li><a href="../jurado/EvPoster.html"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-									<li><a href="../jurado/EvPresentacionOral.html"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
+									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
+									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
 								</ul>
 							</div>
 						</li>
-			<li><a href="reportes.php" class=""><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
+			<li><a href="reportes.php" class="active"><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
 					
 					</ul>
 				</nav>
@@ -109,7 +115,10 @@
 			<br><br>
 			<!-- MAIN CONTENT -->
 			<div id="chart-container">
-			<canvas id="mycanvas"></canvas>
+				<h1>Resultados de la Categoria</h1>
+
+				<iframe width="1400" height="515" src="../reportes/bargraph.php" frameborder="0" ></iframe>
+			
 			</div>
 
 			<!-- javascript -->
@@ -138,59 +147,3 @@
 </body>
 
 </html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#registrarNuevo').click(function(){
-
-			if($('#nproyecto').val()==""){
-				alertify.alert("Debes agregar el nombre del proyecto");
-				return false;
-			}
-			else if($('#n1').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n2').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n3').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n4').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n5').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#idjuez').val()==""){
-				alertify.alert("Falta el id del juez");
-				return false;
-			}
-
-			cadena="nproyecto=" + $('#nproyecto').val() +
-					"&n1=" + $('#n1').val() +
-					"&n2=" + $('#n2').val()+
-					"&n3=" + $('#n3').val()+
-					"&n4=" + $('#n4').val()+
-					"&n5=" + $('#n5').val()+
-					"&idjuez=" + $('#idjuez').val();
-
-					$.ajax({
-						type:"POST",
-						url:"../funciones/registrogrupos.php",
-						data:cadena,
-						success:function(r){
-							if(r==1){
-								alertify.success("Agregado con exito");
-							}else{
-								alertify.error("Fallo al agregar");
-							}
-						}
-					});
-		});
-	});
-</script>

@@ -40,17 +40,42 @@
       <p align="center">Evaluación de investigación en Cátedra (IC)</p>
       <p align="center"><strong>INSTRUMENTO PARA EVALUAR LA PRESENTACIÓN ESCRITA . DOCUMENTO COMPLETO</strong></p></td>
     </tr>
+     <tr>
+        <td height="46" colspan="4">Jurado: <?php  echo $_SESSION['usr']  ?> 
+        </td>
+      </tr>
+      <tr>
+        <td height="46" colspan="4">Categoria:
+             <?php  
+           $res=mysqli_query($link,"SELECT * from jueces where usr = '$varsesion'");
+          
+           while($row=mysqli_fetch_array($res))
+                    {
+                      
+
+
+                       echo $row["nombre_categoria"];
+
+                   
+
+                    }         
+
+
+          ?></td>
+
+    </tr>
     <tr>
-     <td height="44" colspan="4">ID de grupo   <select name="id_grupo" id="id_grupo">
-          <option>Seleccione ID de grupo</option>
+      <td height="40" colspan="4"><strong>Titulo de la investigacion: 
+         <select name="nombre_proyecto" id="nombre_proyecto">
+          <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"select * from grupos");
+          $res=mysqli_query($link,"SELECT * from grupos where total_cat4 = 0");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>
 
 
-                      <option><?php echo $row ["id_grupo"];?></option>
+                      <option><?php echo $row ["nombre_proyecto"];?></option>
 
                     <?php 
 
@@ -58,53 +83,6 @@
                     
                     ?>  
         </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Jurado
-          <select name="id_juez" id="id_juez">
-            <option>Seleccione al jurado</option>
-                <?php  
-          $res=mysqli_query($link,"select * from jueces");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
-
-
-                      <option><?php echo $row ["nombre_juez"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Categoria
-          <select name="id_categoria" id="id_categoria">
-            <option>Seleccione nombre de Categoria</option>
-                   <?php  
-          $res=mysqli_query($link,"select * from categorias");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
-
-
-                      <option><?php echo $row ["nombre_categoria"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-
-    </tr>
-    <tr>
-      <td height="40" colspan="4"><strong>Titulo de investigacion: 
-        <label for="tx"></label>
-        <input name="tx" type="text" id="tx" value="" size="90" />
-      </strong></td>
     </tr>
     <tr>
       <td height="58" colspan="4" valign="top"><strong>Indicaciones:</strong> Asigne el puntaje donde se ubica la calificación que considere de acuerdo con el contenido del informe final en congruencia con lo Lineamientos Básicos para elaborar Anteproyectos en informes de investigación.<strong> Escriba observaciones cuando los puntajes asignados sean menores o iguales a la mitad del valor.</strong></td>

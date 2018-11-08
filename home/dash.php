@@ -94,6 +94,7 @@
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
 									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
 									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
 								</ul>
 							</div>
 						</li>
@@ -112,13 +113,13 @@
 				<h2><font color=blue>Bienvenidos al Sistema de Evaluación de Proyectos de Cátedra de la FIUESS</font></h2>
 				<h3>Por favor leer los pasos para el mejor uso de la herramienta:</h3>
 				<h3><font color=red>Administrador</font></h3>
-				<h4>Paso 1: Eliga del menu a su izquierda la pestaña de "Agregar Categorías", luego inserte las categorías deseadas.</h4>
-				<h4>Paso 2: Eliga del menu a su izquierda la pestaña de "Agregar Jurados", luego inserte los nombres de los jurados.</h4>
-				<h4>Paso 3: Eliga del menu a su izquierda la pestaña de "Agregar Grupos", luego inserte los grupos a examinar.</h4>
+				<h4>Paso 1: Elija del menu a su izquierda la pestaña de "Agregar Categorías", luego inserte las categorías deseadas.</h4>
+				<h4>Paso 2: Elija del menu a su izquierda la pestaña de "Agregar Jurados", luego inserte los nombres de los jurados.</h4>
+				<h4>Paso 3: Elija del menu a su izquierda la pestaña de "Agregar Grupos", luego inserte los grupos a examinar.</h4>
 
 				<h3><font color=green>Jurado</font></h3>
 				<h4>Paso 1: Haga click en el menu a su izquierda sobre la pestaña de "Evaluación Grupos"</h4>
-				<h4>Paso 2: Eliga dentro de las opciones el formulario a evaluar</h4>
+				<h4>Paso 2: Elija dentro de las opciones el formulario a evaluar</h4>
 			</div>
 
 
@@ -142,59 +143,3 @@
 </body>
 
 </html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#registrarNuevo').click(function(){
-
-			if($('#nproyecto').val()==""){
-				alertify.alert("Debes agregar el nombre del proyecto");
-				return false;
-			}
-			else if($('#n1').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n2').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n3').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n4').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#n5').val()==""){
-				alertify.alert("Falta el nombre de un integrante");
-				return false;
-			}
-			else if($('#idjuez').val()==""){
-				alertify.alert("Falta el id del juez");
-				return false;
-			}
-
-			cadena="nproyecto=" + $('#nproyecto').val() +
-					"&n1=" + $('#n1').val() +
-					"&n2=" + $('#n2').val()+
-					"&n3=" + $('#n3').val()+
-					"&n4=" + $('#n4').val()+
-					"&n5=" + $('#n5').val()+
-					"&idjuez=" + $('#idjuez').val();
-
-					$.ajax({
-						type:"POST",
-						url:"../funciones/registrogrupos.php",
-						data:cadena,
-						success:function(r){
-							if(r==1){
-								alertify.success("Agregado con exito");
-							}else{
-								alertify.error("Fallo al agregar");
-							}
-						}
-					});
-		});
-	});
-</script>

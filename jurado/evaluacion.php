@@ -1,4 +1,31 @@
 
+<?php 
+  session_start();
+  $varsesion = $_SESSION['usr'];
+  if($varsesion == null || $varsesion == '')
+  {
+    echo 'Usted no tiene permiso de ver este contenido.';
+    die();
+  }
+
+   include("conexion.php");
+   $link=conecta(); 
+	$res=mysqli_query($link,"SELECT * from jueces where usr = '$varsesion'");
+
+	while($row=mysqli_fetch_array($res))
+	{
+    
+
+
+     $cat = $row["nombre_categoria"];
+
+
+ 
+
+  	}      
+
+ 
+ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,9 +42,7 @@
  	<form action="">
  <?php 
 
-$id_grupo=$_POST["id_grupo"];
-$id_juez=$_POST["id_juez"];
-$id_categoria=$_POST["id_categoria"];
+$nombre_proyecto=$_POST["nombre_proyecto"];
 $s1=$_POST["s1"];
 $s2=$_POST["s2"];
 $s3=$_POST["s3"];
@@ -28,17 +53,14 @@ $s7=$_POST["s7"];
 $s8=$_POST["s8"];
 $total=$s1+$s2+$s3+$s4+$s5+$s6+$s7+$s8;
 //echo $total;
+ 
 
-include("conexion.php");
-$link=conecta(); 
 
-$sql="INSERT INTO rescat4 (id_rescat4,id_grupo,id_juez,id_categoria,resultado) values(0,'$id_grupo','$id_juez','$id_categoria','$total')";
+$sql="UPDATE grupos SET total_cat4 = '$total' WHERE nombre_proyecto ='$nombre_proyecto';";
 
-$result=mysqli_query($link,$sql);
+$result= mysqli_query($link,$sql);
 
-echo $result;
-
-if($result==1)
+if($result>0)
 {
 
 echo "DATOS ENVIADOS CORRECTAMENTE";
@@ -49,8 +71,7 @@ echo "DATOS ENVIADOS CORRECTAMENTE";
 
  ?>
 <br><br>
-<input type="button" value="Regresar" onclick="window.location.href='../home/dash.php'" />
-</form>
+<input type="button" value="Regresar" onclick="window.location.href='../home/p_Escrita.php'" />
+
 </div>
  </body>
- 

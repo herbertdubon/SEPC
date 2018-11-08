@@ -40,17 +40,43 @@
       <td height="54" colspan="4" align="center" valign="top"><p align="left"><img src="uees.png" width="180" height="180" /> VICERECTORIA DE INVESTIGACIÓN Y PROYECCIÓN SOCIAL DIRECCION DE INVESTIGACIÓN<br /> 
       <p align="center">INSTRUMENTO PARA EVALUAR LA PRESENTACION ORAL</p>
     </tr>
+   
+      <tr>
+        <td height="46" colspan="4">Jurado: <?php  echo $_SESSION['usr']  ?> 
+        </td>
+      </tr>
+      <tr>
+        <td height="46" colspan="4">Categoria:
+             <?php  
+           $res=mysqli_query($link,"SELECT * from jueces where usr = '$varsesion'");
+          
+           while($row=mysqli_fetch_array($res))
+                    {
+                      
+
+
+                       echo $row["nombre_categoria"];
+
+                   
+
+                    }         
+
+
+          ?></td>
+
+    </tr>
     <tr>
-     <td height="44" colspan="4">ID de grupo   <select name="id_grupo" id="id_grupo">
-          <option>Seleccione ID de grupo</option>
+      <td height="40" colspan="4"><strong>Titulo de la investigacion: 
+         <select name="nombre_proyecto" id="nombre_proyecto">
+          <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"select * from grupos");
+          $res=mysqli_query($link,"SELECT * from grupos where total_cat2 = 0");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>
 
 
-                      <option><?php echo $row ["id_grupo"];?></option>
+                      <option><?php echo $row ["nombre_proyecto"];?></option>
 
                     <?php 
 
@@ -58,53 +84,6 @@
                     
                     ?>  
         </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Jurado
-          <select name="id_juez" id="id_juez">
-            <option>Seleccione al jurado</option>
-                <?php  
-          $res=mysqli_query($link,"select * from jueces");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
-
-
-                      <option><?php echo $row ["nombre_juez"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-      </tr>
-      <tr>
-        <td height="46" colspan="4">Categoria
-          <select name="id_categoria" id="id_categoria">
-            <option>Seleccione nombre de Categoria</option>
-                   <?php  
-          $res=mysqli_query($link,"select * from categorias");
-                    while($row=mysqli_fetch_array($res))
-                    {
-                    ?>
-
-
-                      <option><?php echo $row ["nombre_categoria"];?></option>
-
-                    <?php 
-
-                    }         
-                    
-                    ?> 
-        </select></td>
-
-    </tr>
-    <tr>
-      <td height="40" colspan="4"><strong>Titulo de la investigacion: 
-          <label for="tx1"></label>
-        <input name="tx1" type="text" id="tx1" value="" size="90" />
-      </strong></td>
     </tr>
     <tr>
     <br />

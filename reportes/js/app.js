@@ -1,32 +1,40 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://localhost:8080/SEPC/reportes/data.php",
+		url: "../datos.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
-			var id_grupo = [];
-			var resultado = [];
+			var datos = JSON.parse(data); 
+			var nombre_proyecto = [];
+			var total = [];
 
-			for(var i in data) {
-				id_grupo.push("id_grupo" + data[i].id_grupo);
-				resultado.push(data[i].resultado);
+			for(var i in datos) {
+				nombre_proyecto.push("Nombre del proyecto" + datos[i].nombre_proyecto);
+				total.push(datos[i].total);
 			}
 
+			var ctx = $("#grafico");
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: chartdata
+			});
+
 			var chartdata = {
-				labels: id_grupo,
+				labels: nombre_proyecto,
 				datasets : [
 					{
-						label: 'id_grupo resultado',
+						label: 'Nombre del proyecto total',
 						backgroundColor: 'rgba(66, 244, 122, 0.75)',
 						borderColor: 'rgba(66, 244, 122, 0.75)',
 						hoverBackgroundColor: 'rgba(66, 134, 244, 1)',
 						hoverBorderColor: 'rgba(66, 134, 244, 1)',
-						data: resultado
+						data: total
 					}
 				]
 			};
 
-			var ctx = $("#mycanvas");
+			var ctx = $("#grafico");
 
 			var barGraph = new Chart(ctx, {
 				type: 'bar',
@@ -34,7 +42,7 @@ $(document).ready(function(){
 			});
 		},
 		error: function(data) {
-			console.log(data);
+			console.log(datos);
 		}
 	});
 });

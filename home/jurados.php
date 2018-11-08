@@ -169,7 +169,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<select id="catnum" name="catnum" class="form-control">	
+									<select id="nombrecat" name="nombrecat" class="form-control">	
 											<option>Seleccione una categoría</option>
 											<?php
 										$res=mysqli_query($link,"select * from categorias");
@@ -221,6 +221,7 @@
 		<!-- END WRAPPER -->
 		<!-- Javascript -->
 		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
 		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 		<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
@@ -254,7 +255,7 @@
 				alertify.alert("Debes agregar tu cif");
 				return false;
 			}
-			else if($('#catnum').val()==""){
+			else if($('#nombrecat').val()==""){
 				alertify.alert("Debes agregar el id de la categoria");
 				return false;
 			}
@@ -263,7 +264,7 @@
 					"&nombre=" + $('#nombre').val() + 
 					"&pass=" + $('#pass').val() +
 					"&cif=" + $('#cif').val() +
-					"&catnum=" + $('#catnum').val();
+					"&nombrecat=" + $('#nombrecat').val();
 
 					$.ajax({
 						type:"POST",

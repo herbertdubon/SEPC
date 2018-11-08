@@ -1,27 +1,79 @@
-<?php
-$usuario = $_POST['usr'];
-$clave = $_POST['psw'];
 
-session_start();
-$_SESSION ['usr'] = $usuario;
+<?php  
 
-//Se conecta a la base
-$conexion= mysqli_connect("localhost", "root", "", "proyecto");
-$consulta="SELECT * from users where usr = '$usuario' and pass= '$clave'";
-$resultado=mysqli_query($conexion, $consulta);
 
-$filas= mysqli_num_rows($resultado);
+	$usuario = $_POST['user'];
+	$clave = $_POST['psw'];
+	$cat= $_POST['cat'];
 
-if($filas>0)
-{
- header("location:home/dash.php");
 
-}
+	//Se conecta a la base
+	$conexion= mysqli_connect("localhost", "root", "", "proyecto");
+	require("funciones/database.php");
+	include("funciones/functions.php");
+	
+	$consulta ="SELECT * from users where usr = '$usuario' and pass= '$clave' and nombre_categoria = '$cat'";
+	$data = Database::getRows($consulta, null);
 
-else
-{
+	//Verifica si el usuario existe
+	if($data != null)
+	{
+			
+			
+		if($cat== "0")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/dash.php");
+			}
+			
+		else if($cat == "Tecnologia")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/tecnologia.php");	
+			}
 
-  echo "Datos incorrectos!";
-}
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+		else if($cat == "Presentacion Oral")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/p_Oral.php");	
+			}
+
+		else if($cat == "Poster Cientifico")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/p_Cientifico.php");	
+			}
+		else if($cat == "Innovacion")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/p_Innovacion.php");	
+			}
+
+		else if($cat == "Presentacion Escrita")
+			{
+				session_start();
+				$_SESSION ['usr'] = $usuario;
+				header("location:home/p_Escrita.php");	
+			}
+			
+		
+	  	
+	}
+	else
+	{
+		echo "nel";
+		header("location:index");	
+
+
+	}
+
+	//Cierra la conexion
+	mysqli_close($conexion);
+?>
+
+	
