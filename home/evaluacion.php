@@ -76,18 +76,19 @@
             <li>
             <a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
             </li>
-			<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
+			<li><a href="dash.php" class="active"><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
 			<li><a href="categorias.php" class=""><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
             <li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
             <li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
 			<li>
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check" class="active"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="../jurado/2.html"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
-									<li><a href="../jurado/evaluacion.html"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-									<li><a href="../jurado/EvPoster.html"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-									<li><a href="../jurado/EvPresentacionOral.html"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
+									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
+									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
 								</ul>
 							</div>
 						</li>

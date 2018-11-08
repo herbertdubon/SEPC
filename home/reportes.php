@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="js/app.js"></script>
 		<style type="text/css">
 			#chart-container {
-				width: 640px;
+				width: 2000px;
 				height: auto;
 			}
 		</style>
@@ -87,7 +87,7 @@
             <li>
             <a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
             </li>
-			<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
+			<li><a href="dash.php" class="active"><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
 			<li><a href="categorias.php" class=""><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
             <li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
             <li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
@@ -103,7 +103,7 @@
 								</ul>
 							</div>
 						</li>
-			<li><a href="reportes.php" class="active"><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
+			<li><a href="reportes.php" class=""><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
 					
 					</ul>
 				</nav>
@@ -116,7 +116,7 @@
 			<!-- MAIN CONTENT -->
 			<div id="chart-container">
 				<h1>Resultados de la Categoria</h1>
-
+			
 				<iframe width="1400" height="515" src="../reportes/bargraph.php" frameborder="0" ></iframe>
 			
 			</div>

@@ -82,9 +82,9 @@
             <li>
             <a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
             </li>
-			<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
+			<li><a href="dash.php" class="active"><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
 			<li><a href="categorias.php" class=""><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
-            <li><a href="jurados.php" class="active"><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
+            <li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
             <li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
 			<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
@@ -94,6 +94,7 @@
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
 									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
 									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
 								</ul>
 							</div>
 						</li>
@@ -122,7 +123,7 @@
 							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
 									<input id="user" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -132,7 +133,7 @@
 							<a><label class="col-md-4 control-label">Nombre completo del Juez</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
 									<input id="nombre" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -144,7 +145,7 @@
 							<a><label class="col-md-4 control-label">Contraseña</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
 									<input id="pass" name="njurado" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
 								</div>
 							</div>
@@ -154,7 +155,7 @@
 							<a><label class="col-md-4 control-label">CIF</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
 									<input id="cif" name="njurado" placeholder="Ingresar CIF..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -168,7 +169,7 @@
 							<a><label class="col-md-4 control-label">Categoria a evaluar</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
 									<select id="nombrecat" name="nombrecat" class="form-control">	
 											<option>Seleccione una categoría</option>
 											<?php

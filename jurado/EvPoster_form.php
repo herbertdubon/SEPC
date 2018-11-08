@@ -51,7 +51,6 @@
           
            while($row=mysqli_fetch_array($res))
                     {
-                      
 
 
                        echo $row["nombre_categoria"];
@@ -311,7 +310,7 @@
     
     <tr>
       <td height="104" colspan="3"><strong>Nota Final:</strong></td>
-      <td align="center">100</td>
+      <td align="center">90</td>
       <td><label for="ta10"></label>
       <textarea name="ta10" id="ta10" cols="45" rows="5"></textarea></td>
     </tr>
