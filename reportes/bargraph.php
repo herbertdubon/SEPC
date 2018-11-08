@@ -42,7 +42,7 @@
 </head>
 <body>
     <h1>Resultados de Tecnologia</h1>
-<div style="width: 400px; height: 200px;">
+<div style="width: 800px; height: 400px;">
 <canvas id="myChart"></canvas>
 </div>
 
@@ -74,7 +74,7 @@ var chart = new Chart(ctx, {
 
 
 <h1>Resultados de Presentacion Oral </h1>
-<div style="width: 400px; height: 200px;">
+<div style="width: 800px; height: 400px;">
 <canvas id="myChart1"></canvas>
 </div>
 
