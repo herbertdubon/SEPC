@@ -20,7 +20,7 @@
 		<script type="text/javascript" src="js/app.js"></script>
 		<style type="text/css">
 			#chart-container {
-				width: 2000px;
+				width: 640px;
 				height: auto;
 			}
 		</style>
@@ -71,7 +71,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr'];  ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 							
-								<li><a href="../funciones/salir.php"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+								<li><a href="../funciones/salir.php""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
 						</li>						
 					</ul>
@@ -95,11 +95,10 @@
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>									
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
-									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
+									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
 								</ul>
 							</div>
 						</li>
@@ -116,7 +115,7 @@
 			<!-- MAIN CONTENT -->
 			<div id="chart-container">
 				<h1>Resultados de la Categoria</h1>
-			
+
 				<iframe width="1400" height="515" src="../reportes/bargraph.php" frameborder="0" ></iframe>
 			
 			</div>

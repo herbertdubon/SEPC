@@ -15,7 +15,7 @@
         
         die($ex->getMessage());
     }
-    $stmt=$dbcon->prepare("SELECT * FROM grupos ORDER BY total_cat1 desc, total_cat2 desc, total_cat3 desc, total_cat4 desc, total_cat5 desc;");
+    $stmt=$dbcon->prepare("SELECT * FROM grupos ORDER BY total_cat1, total_cat2, total_cat3, total_cat4, total_cat5 DESC;");
     $stmt->execute();
     $json= [];
     $json2= [];
@@ -30,19 +30,48 @@
         $json3[]= (int)$total_cat2;
         $json4[]= (int)$total_cat3;
         $json5[]= (int)$total_cat4;
-        $json6[]= (int)$total_cat5;      
+        $json6[]= (int)$total_cat5;
+       
         
     }
+
+   
+    
     
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+    <style type="text/css">
+        
+        ul {
+    text-align: justify;
+}
+ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ul:before {
+    content: '';
+    display: block;
+    margin-top: -1.25em;
+}
+li {
+    display: inline-block;
+    margin-right: -.25em;
+    position: relative;
+    top: 1.25em;
+}
+    </style>
     <title>Chart js</title>
 </head>
 <body>
+
+    <ul>
+        <li>
     <h1>Resultados de Tecnologia</h1>
-<div style="width: 800px; height: 400px;">
+<div style="width: 400px; height: 200px;">
 <canvas id="myChart"></canvas>
 </div>
 
@@ -59,46 +88,30 @@ var chart = new Chart(ctx, {
         labels: <?php echo json_encode($json); ?>,
         datasets: [{
             label: "Total de la categoria",
-            backgroundColor: 'lightgreen',
+            backgroundColor: 'lightblue',
             borderColor: 'red',
-            hoverBackgroundColor: 'rgba(66, 134, 244, 1)',
-            hoverBorderColor: 'rgba(66, 134, 244, 1)',
+            hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+            hoverBorderColor: 'rgba(200, 200, 200, 1)',
             data: <?php echo json_encode($json2); ?>,
         }]
     },
 
     // Configuration options go here
-    options: {
-        scales: {
-            xAxes: [{
-                stacked: true,
-                gridLines: {
-                    display:false
-                }
-                
-            }],
-            yAxes: [{
-                stacked: true,
-                gridLines: {
-                    display:false
-                },
-                
-            }]
-        }
-    }
+    options: {}
 });
 </script>
+</li>
 
-
+<li>
 <h1>Resultados de Presentacion Oral </h1>
-<div style="width: 800px; height: 400px;">
+<div style="width: 400px; height: 200px;">
 <canvas id="myChart1"></canvas>
 </div>
 
 <script type="text/javascript">
 
-    var ctx = document.getElementById('myChart1').getContext('2d');
-    var chart = new Chart(ctx, {
+    var ctx1 = document.getElementById('myChart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
         // The type of chart we want to create
         type: 'bar',
 
@@ -116,28 +129,20 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {
-            scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-        }
+        options: {}
     });
 </script>
-
+</li>
+<li>
 <h1>Resultados de Poster Cientifico </h1>
-<div style="width: 800px; height: 400px;">
+<div style="width: 400px; height: 200px;">
 <canvas id="myChart2"></canvas>
 </div>
 
 <script type="text/javascript">
 
-    var ctx = document.getElementById('myChart2').getContext('2d');
-    var chart = new Chart(ctx, {
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var chart2 = new Chart(ctx2, {
         // The type of chart we want to create
         type: 'bar',
 
@@ -155,27 +160,21 @@ var chart = new Chart(ctx, {
         },
 
         // Configuration options go here
-        options: {
-            scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-        }
+        options: {}
     });
 </script>
+</li>
+
+<li>
 <h1>Resultados de Innovacion </h1>
-<div style="width: 800px; height: 400px;">
+<div style="width: 400px; height: 200px;">
 <canvas id="myChart3"></canvas>
 </div>
 
 <script type="text/javascript">
 
-    var ctx = document.getElementById('myChart3').getContext('2d');
-    var chart = new Chart(ctx, {
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
+    var chart3 = new Chart(ctx3, {
         // The type of chart we want to create
         type: 'bar',
 
@@ -188,33 +187,26 @@ var chart = new Chart(ctx, {
                 borderColor: 'red',
                 hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                 hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                data: <?php echo json_encode($json4); ?>,
+                data: <?php echo json_encode($json5); ?>,
             }]
         },
 
         // Configuration options go here
-        options: {
-            scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-        }
+        options: {}
     });
 </script>
+</li>
+<li>
 
 <h1>Resultados de Presentacion Oral </h1>
-<div style="width: 800px; height: 400px;">
+<div style="width: 400px; height: 200px;">
 <canvas id="myChart4"></canvas>
 </div>
 
 <script type="text/javascript">
 
-    var ctx = document.getElementById('myChart4').getContext('2d');
-    var chart = new Chart(ctx, {
+    var ctx4 = document.getElementById('myChart4').getContext('2d');
+    var chart4 = new Chart(ctx4, {
         // The type of chart we want to create
         type: 'bar',
 
@@ -227,23 +219,16 @@ var chart = new Chart(ctx, {
                 borderColor: 'red',
                 hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                 hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                data: <?php echo json_encode($json5); ?>,
+                data: <?php echo json_encode($json6); ?>,
             }]
         },
 
         // Configuration options go here
-        options: {
-            scales: {
-            xAxes: [{
-                stacked: true
-            }],
-            yAxes: [{
-                stacked: true
-            }]
-        }
-        }
+        options: {}
     });
 </script>
+</li>
+</ul>
 
 </body>
 </html>

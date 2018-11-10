@@ -1,18 +1,27 @@
-<?php 
-	session_start();
-	$varsesion = $_SESSION['usr'];
+<?php
+session_start();
+$varsesion = $_SESSION['usr'];
 
-	if($varsesion == null || $varsesion == '')
-	{
-		echo 'Usted no tiene permiso de ver este contenido.';
-		die();
-	}
- ?>
+if ($varsesion == null || $varsesion == '') {
+    echo 'Usted no tiene permiso de ver este contenido.';
+    die();
+}
+
+?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<style type="text/css">
+			#chart-container {
+				width: 640px;
+				height: auto;
+			}
+		</style>
 	<title>SEPC UEES Dashboard</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,40 +40,38 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/uees.png">
-	<?php require_once "scripts.php"; ?>
 </head>
 
 <body>
 <!-- WRAPPER -->
-<div id="wrapper">    
-		<!-- NAVBAR -->    
-		<nav class="navbar navbar-default navbar-fixed-top">			
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-fullwidth"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
-				</div>      
+				</div>
 				<form class="navbar-form navbar-left">
 					<div class="input-group">
 						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
-						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>            
-					</div>          
-        </form>    
+						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+					</div>
+        </form>
         <form class="navbar-form navbar-left">
           <h4><span style="font-weight:bold">SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</span></h4>
 
         </form>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-						
-							
-			
+
+
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr'];  ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr']; ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-							
-								<li><a href="../funciones/salir.php"><i class="lnr lnr-exit"></i> <span>Salir</span></a></li>
+
+								<li><a href="../funciones/salir.php""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>						
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -78,72 +85,32 @@
             <li>
             <a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
             </li>
-			<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
-			<li><a href="categorias.php" class="active"><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
-            <li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
-            <li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
 			<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
 									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
 									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
 								</ul>
 							</div>
 						</li>
-			<li><a href="reportes.php" class=""><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
-					
 					</ul>
 				</nav>
 			</div>
 		</div>
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
+		<!-- MAIN -->
 		<div class="main">
 			<br><br>
 			<!-- MAIN CONTENT -->
 			<div class="container">
-
-				<div class="well form-horizontal" action="../funciones/registrocats.php " method="post"  id="contact_form">
-					<fieldset>
-
-						<!-- Form Name -->
-						<legend class="text-center">Agregar Categoría</legend>
-
-
-						<!-- Text input-->
-
-						<div class="form-group">
-							<a><label class="col-md-4 control-label">Nombre Categoria</label></a>  
-							<div class="col-md-4 inputGroupContainer">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
-									<input  id="ncat" name="ncat" placeholder="Ingresar Nombre de Categoria" class="form-control"  type="text" required>
-								</div>
-							</div>
-						</div>
-
-						<!-- Text input-->
-
-
-
-						<!-- Success message -->
-						<div class="alert alert-success" role="alert" id="success_message" align="center">Mucha suerte  en la evaluación de su grupo. <i class="glyphicon glyphicon-thumbs-up"></i></div>
-
-						<!-- Button -->
-						<div class="form-group">
-							<label class="col-md-4 control-label"></label>
-							<div class="col-md-4" align="center">
-								<button id="registrarNuevo" type="submit" class="btn btn-primary btn-lg" >Enviar &nbsp<span class="glyphicon glyphicon-send"></span></button>
-							</div>
-						</div>
-
-					</fieldset>
-				</div>
+				<h2><font color=blue>Bienvenidos al Sistema de Evaluación de Proyectos de Cátedra de la FIUESS</font></h2>
+				<h3><font color=green>Jurado</font></h3>
+				<h4>Paso 1: Haga click en el menu a su izquierda sobre la pestaña de "Evaluación Grupos"</h4>
+				<h4>Paso 2: Elija dentro de las opciones el formulario a evaluar</h4>
 			</div>
-		</div><!-- /.container -->
 
 
 			<!-- END MAIN -->
@@ -166,30 +133,3 @@
 </body>
 
 </html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#registrarNuevo').click(function(){
-
-			if($('#ncat').val()==""){
-				alertify.alert("Debes agregar el nombre de la categoria");
-				return false;
-			}
-			
-
-			cadena= "ncat=" + $('#ncat').val();
-
-					$.ajax({
-						type:"POST",
-						url:"../funciones/registrocats.php",
-						data:cadena,
-						success:function(r){
-							if(r==1){
-								alertify.success("Agregado con exito");
-							}else{
-								alertify.error("Fallo al agregar");
-							}
-						}
-					});
-		});
-	});
-</script>

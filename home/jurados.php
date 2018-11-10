@@ -90,11 +90,10 @@
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
-									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
+									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>									
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
-									<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
+									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
 								</ul>
 							</div>
 						</li>
@@ -123,7 +122,7 @@
 							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<input id="user" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -133,7 +132,7 @@
 							<a><label class="col-md-4 control-label">Nombre completo del Juez</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<input id="nombre" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -145,7 +144,7 @@
 							<a><label class="col-md-4 control-label">Contraseña</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<input id="pass" name="njurado" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
 								</div>
 							</div>
@@ -155,7 +154,7 @@
 							<a><label class="col-md-4 control-label">CIF</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<input id="cif" name="njurado" placeholder="Ingresar CIF..." class="form-control"  type="text" required>
 								</div>
 							</div>
@@ -169,7 +168,7 @@
 							<a><label class="col-md-4 control-label">Categoria a evaluar</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fas fa-user-tie"></i></span>
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<select id="nombrecat" name="nombrecat" class="form-control">	
 											<option>Seleccione una categoría</option>
 											<?php

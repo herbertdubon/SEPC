@@ -18,7 +18,7 @@
 	//Verifica si el usuario existe
 	if($data != null)
 	{
-		
+			
 			
 		if($cat== "0")
 			{
@@ -27,48 +27,42 @@
 				header("location:home/dash.php");
 			}
 			
-		else if($cat == "Tecnologia")
+		else if($cat == "Programacion")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/tecnologia.php");	
+				header("location:home/programacion.php");	
 			}
 
-		else if($cat == "Presentacion Oral")
+		else if($cat == "Robotica")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/p_Oral.php");	
+				header("location:home/robotica.php");	
 			}
 
-		else if($cat == "Poster Cientifico")
+		else if($cat == "Electronica")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/p_Cientifico.php");	
+				header("location:home/electronica.php");	
 			}
-		else if($cat == "Innovacion")
+		else if($cat == "Metodologia de la Investigacion")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/p_Innovacion.php");	
+				header("location:home/metodos.php");	
 			}
 
-		else if($cat == "Presentacion Escrita")
-			{
-				session_start();
-				$_SESSION ['usr'] = $usuario;
-				header("location:home/p_Escrita.php");	
-			}		
+		
+			
 		
 	  	
 	}
 	else
 	{
-		echo "<script>
-                    alert('USUARIO NO ENCONTRADO. VUELVA A INTENTAR');
-                    window.location.href='index.html';
-                    </script> ";	
+		echo "nel";
+		header("location:index");	
 
 
 	}

@@ -135,6 +135,11 @@
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
       </select></td>
       <td rowspan="6"><label for="ta2"></label>
       <textarea name="ta2" id="ta2" cols="45" rows="5"></textarea></td>
@@ -214,6 +219,11 @@
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
       </select></td>
       <td rowspan="5"><label for="ta5"></label>
       <textarea name="ta5" id="ta5" cols="45" rows="5"></textarea></td>
@@ -235,14 +245,16 @@
       <td rowspan="5" align="center">40</td>
       <td rowspan="5"><select name="s6" id="s6">
         <option>Seleccione puntaje</option>
-          <option value="1">5</option>
-          <option value="2">10</option>
-          <option value="3">15</option>
-          <option value="4">20</option>
-          <option value="5">25</option>
-          <option value="6">30</option>
-          <option value="7">35</option>
-          <option value="8">40</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
       </select></td>
       <td rowspan="5"><label for="ta6"></label>
       <textarea name="ta6" id="ta6" cols="45" rows="5"></textarea></td>
@@ -264,10 +276,16 @@
       <td rowspan="3" align="center" valign="middle">20</td>
       <td rowspan="3"><select name="s7" id="s7">
         <option>Seleccione puntaje</option>
-          <option value="1">5</option>
-          <option value="2">10</option>
-          <option value="3">15</option>
-          <option value="4">20</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
       </select></td>
       <td rowspan="3"><label for="ta7"></label>
       <textarea name="ta7" id="ta7" cols="45" rows="5"></textarea></td>

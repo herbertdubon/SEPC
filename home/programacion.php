@@ -1,13 +1,12 @@
-<?php 
-	session_start();
-	$varsesion = $_SESSION['usr'];
+<?php
+session_start();
+$varsesion = $_SESSION['usr'];
 
-	if($varsesion == null || $varsesion == '')
-	{
-		echo 'Usted no tiene permiso de ver este contenido.';
-		die();
-	}
- ?>
+if ($varsesion == null || $varsesion == '') {
+    echo 'Usted no tiene permiso de ver este contenido.';
+    die();
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -41,34 +40,34 @@
 
 <body>
 <!-- WRAPPER -->
-	<div id="wrapper">    
-		<!-- NAVBAR -->    
-		<nav class="navbar navbar-default navbar-fixed-top">			
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-fullwidth"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
-				</div>      
+				</div>
 				<form class="navbar-form navbar-left">
 					<div class="input-group">
 						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
-						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>            
-					</div>          
-        </form>    
+						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+					</div>
+        </form>
         <form class="navbar-form navbar-left">
           <h4><span style="font-weight:bold">SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</span></h4>
 
         </form>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-					
-					
+
+
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr'];  ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr']; ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-							
+
 								<li><a href="../funciones/salir.php""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>						
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -81,17 +80,15 @@
 					<ul class="nav">
             <li>
             <a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
-           
-							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="../jurado/2_form.php"><i class="far fa-check-square"></i>Presentación Escrita Articulo Publicación</a></li>
-									
-								</ul>
-							</div>
+            </li>
+				<li>
+					<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+						<div id="subPages" class="collapse ">
+							<ul class="nav">
+								<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>
+							</ul>
+						</div>
 						</li>
-			
-					
 					</ul>
 				</nav>
 			</div>

@@ -93,7 +93,7 @@
 								</ul>
 							</div>
 						</li>
-			
+			<li><a href="reportes.php" class=""><i class="fas fa-chart-bar"></i> <span>Reportes</span></a></li>
 					
 					</ul>
 				</nav>
