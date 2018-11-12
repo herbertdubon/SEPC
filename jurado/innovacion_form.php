@@ -34,7 +34,7 @@
 <form id="form1" name="form1" method="post" action="innovacion.php">
   <table width="878" border="1" align="center">
     <tr>
-      <td height="54" colspan="2" align="center" valign="top"><p align="left"><img src="../../../../Imágenes/evaluacion/uees.png" width="81" height="70" /> 
+      <td height="54" colspan="2" align="center" valign="top"><p align="left"><img src="../images/uees.png" width="81" height="70" /> 
         <h1  align="center"><strong>CERTAMEN DE INVESTIGACION E INNOVACION EN CATEDRA</strong><br />
         </h1>
     </tr>
@@ -71,7 +71,7 @@
          <select name="nombre_proyecto" id="nombre_proyecto">
           <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"SELECT * from grupos where total_cat5 = 0");
+          $res=mysqli_query($link,"SELECT * from grupos where total_cat5 = 0 and usr = '$varsesion'");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>

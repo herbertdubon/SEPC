@@ -90,8 +90,8 @@ if ($varsesion == null || $varsesion == '') {
 							<div id="subPages" class="collapse ">
 								<ul class="nav">
 									<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
+									<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+									<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>
 								</ul>
 							</div>
 						</li>

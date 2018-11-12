@@ -16,6 +16,6 @@ $usr = $_POST['usr'];
 $insert = "INSERT INTO grupos (nombre_proyecto, n1, n2, n3, n4, n5, usr) VALUES ('$nproyecto','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr');";
 
   echo $result=mysqli_query($con,$insert);
-
+  
 
  ?>

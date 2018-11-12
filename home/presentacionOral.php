@@ -7,13 +7,18 @@
 		echo 'Usted no tiene permiso de ver este contenido.';
 		die();
 	}
+
+
  ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-<style type="text/css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<style type="text/css">
 			#chart-container {
 				width: 640px;
 				height: auto;
@@ -118,13 +123,16 @@
 		<div class="main">
 			<br><br>
 			<!-- MAIN CONTENT -->
-			<div class="container">
-				<h2><font color=blue>Bienvenidos al Sistema de Evaluación de Proyectos de Cátedra de la FIUESS</font></h2>
+			<div id="chart-container">
 
-				<h3><font color=green>Jurado</font></h3>
-				<h4>Paso 1: Haga click en el menu a su izquierda sobre la pestaña de "Evaluación Grupos"</h4>
-				<h4>Paso 2: Elija dentro de las opciones el formulario a evaluar</h4>
+				<iframe width="1400" height="515" src="../reportes/presentacionOral.php" frameborder="0" ></iframe>
+			
 			</div>
+
+			<!-- javascript -->
+			<script type="text/javascript" src="../reportes/js/jquery.min.js"></script>
+			<script type="text/javascript" src="../reportes/js/Chart.min.js"></script>
+			<script type="text/javascript" src="../reportes/js/app.js"></script>
 
 
 			<!-- END MAIN -->

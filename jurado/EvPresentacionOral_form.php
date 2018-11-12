@@ -70,7 +70,7 @@
          <select name="nombre_proyecto" id="nombre_proyecto">
           <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"SELECT * from grupos where total_cat2 = 0");
+          $res=mysqli_query($link,"SELECT * from grupos where total_cat2 = 0 and usr = '$varsesion'");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>
@@ -134,12 +134,7 @@
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+          <option value="4">5</option>
       </select></td>
       <td rowspan="6"><label for="ta2"></label>
       <textarea name="ta2" id="ta2" cols="45" rows="5"></textarea></td>
@@ -219,11 +214,6 @@
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
       </select></td>
       <td rowspan="5"><label for="ta5"></label>
       <textarea name="ta5" id="ta5" cols="45" rows="5"></textarea></td>
@@ -245,16 +235,14 @@
       <td rowspan="5" align="center">40</td>
       <td rowspan="5"><select name="s6" id="s6">
         <option>Seleccione puntaje</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+          <option value="1">5</option>
+          <option value="2">10</option>
+          <option value="3">15</option>
+          <option value="4">20</option>
+          <option value="5">25</option>
+          <option value="6">30</option>
+          <option value="7">35</option>
+          <option value="8">40</option>         
       </select></td>
       <td rowspan="5"><label for="ta6"></label>
       <textarea name="ta6" id="ta6" cols="45" rows="5"></textarea></td>
@@ -286,6 +274,16 @@
           <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
+          <option value="1">11</option>
+          <option value="2">12</option>
+          <option value="3">13</option>
+          <option value="4">14</option>
+          <option value="5">15</option>
+          <option value="6">16</option>
+          <option value="7">17</option>
+          <option value="8">18</option>
+          <option value="9">19</option>
+          <option value="10">20</option>
       </select></td>
       <td rowspan="3"><label for="ta7"></label>
       <textarea name="ta7" id="ta7" cols="45" rows="5"></textarea></td>

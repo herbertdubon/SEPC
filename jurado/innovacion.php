@@ -69,7 +69,7 @@ echo "DATOS ENVIADOS CORRECTAMENTE";
 
  ?>
 <br><br>
-<input type="button" value="Regresar" onclick="window.location.href='../home/p_Innovacion.php'" />
+<input type="button" value="Regresar" onclick="window.location.href='../home/innovacion.php'" />
 
 </div>
  </body>
