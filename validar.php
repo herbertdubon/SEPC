@@ -31,27 +31,27 @@
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/programacion.php");	
+				header("location:home/jurado_innovacion.php");	
 			}
 
 		else if($cat == "Robotica")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/robotica.php");	
+				header("location:home/jurado_innovacion.php");	
 			}
 
 		else if($cat == "Electronica")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/electronica.php");	
+				header("location:home/jurado_innovacion.php");	
 			}
 		else if($cat == "Metodologia de la Investigacion")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
-				header("location:home/metodos.php");	
+				header("location:home/jurado_metodos.php");	
 			}
 
 		

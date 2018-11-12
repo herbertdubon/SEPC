@@ -144,7 +144,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<select id="nombre_categoria" class="form-control">	
+									<select id="nombre_categoria" class="form-control" name="ncat">	
 											<option>Seleccione la categoria</option>
 										<?php
 										$res=mysqli_query($link,"SELECT * from categorias;");
