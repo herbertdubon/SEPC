@@ -133,7 +133,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="user" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
+									<input id="user" name="user" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="nombre" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
+									<input id="nombre" name="nombre" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
 						</div>
@@ -155,7 +155,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="pass" name="njurado" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
+									<input id="pass" name="pass" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
 								</div>
 							</div>
 						</div>

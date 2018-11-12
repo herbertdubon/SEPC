@@ -39,6 +39,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <style type="text/css">
         
         ul {
@@ -64,10 +65,14 @@ li {
     <title>Chart js</title>
 </head>
 <body>
-<div class="col l2 m4 s6">
+
+
+<input type="button" value="Imprimir Reporte" onClick="window.print()">
+
+<div class="col l2 m4 s6" >
     <ul>
         <li>
-            <h1>Resultados de Programación</h1>
+            <h1>Resultados de Electrónica</h1>
                 <div style="width: 800px; height: 400px;">
                 <canvas id="myChart"></canvas>
                 </div>
@@ -99,9 +104,10 @@ li {
                         xAxes: [{ stacked: true }],
                         yAxes: [{ stacked: true }]
                         }
-                    }
+                    }                    
                 });
                 </script>
+                
                 </div>
             </li>          
 

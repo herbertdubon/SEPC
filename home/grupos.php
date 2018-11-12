@@ -140,17 +140,18 @@
 						<!-- Text input-->
 
 						<div class="form-group">
-							<a><label class="col-md-4 control-label">Categoria</label></a>   
+							<a><label class="col-md-4 control-label">Categoria a evaluar</label></a>
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<select id="nombre_categoria" class="form-control" name="ncat">	
-											<option>Seleccione la categoria</option>
-										<?php
-										$res=mysqli_query($link,"SELECT * from categorias;");
+									<select id="nombrecat" name="nombrecat" class="form-control">	
+											<option>Seleccione una categoría</option>
+											<?php
+										$res=mysqli_query($link,"select * from categorias");
 										while($row=mysqli_fetch_array($res))
 										{
 										?>
+
 
 											<option><?php echo $row ["nombre_categoria"];?></option>
 
@@ -158,11 +159,11 @@
 
 										}					
 										
-										?>							
+										?>	
 									</select>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Text input-->
 
@@ -284,6 +285,10 @@
 				alertify.alert("Debes agregar el nombre del proyecto");
 				return false;
 			}
+			else if($('#nombrecat').val()==""){
+				alertify.alert("Elija una categoria");
+				return false;
+			}
 			else if($('#n1').val()==""){
 				alertify.alert("Falta el nombre de un integrante");
 				return false;
@@ -295,7 +300,8 @@
 			}
 
 			cadena="nproyecto=" + $('#nproyecto').val() +
-					"&n1=" + $('#n1').val() +
+					"&nombrecat=" + $('#nombrecat').val() +
+					"&n1=" + $('#n1').val()+
 					"&n2=" + $('#n2').val()+
 					"&n3=" + $('#n3').val()+
 					"&n4=" + $('#n4').val()+
@@ -310,7 +316,7 @@
 							if(r==1){
 								alertify.success("Agregado con exito");
 							}else{
-								alertify.error("Fallo al agregar");
+								alertify.success("Fallo al agregar");
 							}
 						}
 					});

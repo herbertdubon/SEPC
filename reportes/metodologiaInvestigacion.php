@@ -64,6 +64,7 @@ li {
     <title>Chart js</title>
 </head>
 <body>
+<input type="button" value="Imprimir Reporte" onClick="window.print()">
 <div class="col l2 m4 s6">
     <ul>
         <li>
