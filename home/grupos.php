@@ -90,8 +90,8 @@
 									<ul class="nav">
 										<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>									
 										<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
+										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
 									</ul>
 								</div>
 						</li>
@@ -100,9 +100,9 @@
 								<div id="subPages2" class="collapse ">
 									<ul class="nav">
 										<li><a href="programacion.php"><i class="fas fa-chart-bar"></i>Programacion</a></li>	
-										<li><a href="presentacionEscrita.php"><i class="fas fa-chart-bar"></i>Presentación Escrita Documento Completo</a></li>	
-										<li><a href="presentacionOral.php"><i class="fas fa-chart-bar"></i>Presentación Oral</a></li>	
-										<li><a href="posterCientifico.php"><i class="fas fa-chart-bar"></i>Poster Científico</a></li>									
+										<li><a href="metodologiaInvestigacion.php"><i class="fas fa-chart-bar"></i>Metodología de la Investigación</a></li>	
+										<li><a href="electronica.php"><i class="fas fa-chart-bar"></i>Electrónica</a></li>	
+										<li><a href="robotica.php"><i class="fas fa-chart-bar"></i>Robotica</a></li>									
 																		
 									</ul>
 								</div>
@@ -136,6 +136,33 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- Text input-->
+
+						<div class="form-group">
+							<a><label class="col-md-4 control-label">Categoria</label></a>   
+							<div class="col-md-4 inputGroupContainer">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<select id="nombre_categoria" class="form-control">	
+											<option>Seleccione la categoria</option>
+										<?php
+										$res=mysqli_query($link,"SELECT * from categorias;");
+										while($row=mysqli_fetch_array($res))
+										{
+										?>
+
+											<option><?php echo $row ["nombre_categoria"];?></option>
+
+										<?php	
+
+										}					
+										
+										?>							
+									</select>
+								</div>
+							</div>
+						</div>	
 
 						<!-- Text input-->
 
@@ -186,7 +213,7 @@
 							</div>
 						</div>							
 						
-								<div class="form-group">
+						<div class="form-group">
 							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>   
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">

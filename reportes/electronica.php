@@ -15,7 +15,7 @@
         
         die($ex->getMessage());
     }
-    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat5>0 and categoria='Programacion' ORDER BY total_cat5 DESC;");
+    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat5>0 and categoria='Electronica' ORDER BY total_cat5 DESC;");
     $stmt->execute();
     $json= [];
     $json2= [];
@@ -85,7 +85,7 @@ li {
                         labels: <?php echo json_encode($json); ?>,
                         datasets: [{
                             label: "Total de la categoria",
-                            backgroundColor: 'blue',
+                            backgroundColor: 'orange',
                             borderColor: 'red',
                             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                             hoverBorderColor: 'rgba(200, 200, 200, 1)',

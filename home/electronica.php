@@ -125,7 +125,7 @@
 			<!-- MAIN CONTENT -->
 			<div id="chart-container">
 
-				<iframe width="1400" height="515" src="../reportes/robotica.php" frameborder="0" ></iframe>
+				<iframe width="1400" height="515" src="../reportes/electronica.php" frameborder="0" ></iframe>
 			
 			</div>
 

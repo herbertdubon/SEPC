@@ -88,8 +88,8 @@
 									<ul class="nav">
 										<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>									
 										<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
+										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
 									</ul>
 								</div>
 						</li>
@@ -98,9 +98,9 @@
 								<div id="subPages2" class="collapse ">
 									<ul class="nav">
 										<li><a href="programacion.php"><i class="fas fa-chart-bar"></i>Programacion</a></li>	
-										<li><a href="presentacionEscrita.php"><i class="fas fa-chart-bar"></i>Presentación Escrita Documento Completo</a></li>	
-										<li><a href="presentacionOral.php"><i class="fas fa-chart-bar"></i>Presentación Oral</a></li>	
-										<li><a href="posterCientifico.php"><i class="fas fa-chart-bar"></i>Poster Científico</a></li>									
+										<li><a href="metodologiaInvestigacion.php"><i class="fas fa-chart-bar"></i>Metodología de la Investigación</a></li>	
+										<li><a href="electronica.php"><i class="fas fa-chart-bar"></i>Electrónica</a></li>	
+										<li><a href="robotica.php"><i class="fas fa-chart-bar"></i>Robotica</a></li>									
 																		
 									</ul>
 								</div>
