@@ -35,11 +35,10 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`nombre_categoria`) VALUES
-('Innovacion'),
-('Poster Cientifico'),
-('Presentacion Escrita'),
-('Presentacion Oral'),
-('Tecnologia');
+('Electronica'),
+('Robotica'),
+('Programacion'),
+('Metodologia de la Investigacion');
 
 -- --------------------------------------------------------
 
@@ -49,6 +48,7 @@ INSERT INTO `categorias` (`nombre_categoria`) VALUES
 
 CREATE TABLE `grupos` (
   `nombre_proyecto` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `categoria` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `n1` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `n2` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `n3` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
@@ -66,9 +66,7 @@ CREATE TABLE `grupos` (
 -- Volcado de datos para la tabla `grupos`
 --
 
-INSERT INTO `grupos` (`nombre_proyecto`, `n1`, `n2`, `n3`, `n4`, `n5`, `usr`, `total_cat1`, `total_cat2`, `total_cat3`, `total_cat4`, `total_cat5`) VALUES
-('aaaaa', 'aaaaaaaa', 'aaaaaa', 'aaa', 'aaaa', 'aaa', 'juez', 0, 0, 0, 0, 0),
-('lol', 'lolazo', '', '', '', '', 'juez', 29, 45, 0, 0, 0);
+
 
 -- --------------------------------------------------------
 
@@ -87,12 +85,7 @@ CREATE TABLE `jueces` (
 -- Volcado de datos para la tabla `jueces`
 --
 
-INSERT INTO `jueces` (`nombre_juez`, `nombre_categoria`, `usr`, `CIF`) VALUES
-('lolol', 'Tecnologia', 'juez', 232323232),
-('jueza', 'Presentacion Oral', 'juez2', 12345),
-('jueeez', 'Presentacion Escrita', 'juez3', 24424242),
-('juez', 'Innovacion', 'juez4', 14134134),
-('aaaaaaaa', 'Poster Cientifico', 'jueza', 41412412);
+
 
 -- --------------------------------------------------------
 
@@ -112,18 +105,7 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`usr`, `nombre`, `pass`, `nombre_categoria`, `CIF`) VALUES
-('FADAFDF', 'Yancy', 'EQ413', 'Robotica', 341413),
-('juez', 'lolol', '123', 'Tecnologia', 232323232),
-('juez2', 'jueza', '123', 'Presentacion Oral', 12345),
-('juez3', 'jueeez', '123', 'Presentacion Escrita', 24424242),
-('juez4', 'juez', '123', 'Innovacion', 14134134),
-('jueza', 'aaaaaaaa', '123', 'Poster Cientifico', 41412412),
-('sdaaddq', 'DSSDASD', 'D32134', 'Robotica', 4132412),
-('user566', 'leooo', '123456', '0', NULL),
-('usr', 'usuario', '123', '0', 0),
-('usuario', 'usuario', '123', 'Robotica', 2147483647),
-('wwwwwwwww', 'jueza', '1344131342', 'Presentacion Oral', 12412421);
+
 
 --
 -- Índices para tablas volcadas
