@@ -62,7 +62,7 @@
 	else
 	{
 		echo "nel";
-		header("location:index");	
+		header("location:index.php");	
 
 
 	}

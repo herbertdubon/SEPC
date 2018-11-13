@@ -24,4 +24,4 @@ echo "DATOS ENVIADOS CORRECTAMENTE";
 
  ?>
 <br><br>
-<input type="button" value="Regresar" onclick="window.location.href='index.html'" />
+<input type="button" value="Regresar" onclick="window.location.href='index.php'" />
