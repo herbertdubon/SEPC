@@ -52,34 +52,22 @@
           
            while($row=mysqli_fetch_array($res))
                     {
-                      
+                       echo $row["nombre_categoria"];                  
 
-
-                       echo $row["nombre_categoria"];
-
-                   
-
-                    }         
-
-
+                    } 
           ?></td>
-
     </tr>
     <tr>
       <td height="40" colspan="4"><strong>Titulo de la investigacion: 
          <select name="nombre_proyecto" id="nombre_proyecto">
           <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"SELECT * from grupos where total_cat2 = 0 and usr = '$varsesion'");
+          $res=mysqli_query($link,"SELECT * from grupos where (usr = '$varsesion') or (usr2 = '$varsesion') or (usr3 = '$varsesion')");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>
-
-
                       <option><?php echo $row ["nombre_proyecto"];?></option>
-
                     <?php 
-
                     }         
                     
                     ?>  

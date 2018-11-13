@@ -14,15 +14,9 @@
 
 	while($row=mysqli_fetch_array($res))
 	{
-    
-
-
      $cat = $row["nombre_categoria"];
 
-
- 
-
-  	}      
+  }      
 
  
  ?>
@@ -44,6 +38,13 @@
 
 
 $nombre_proyecto=$_POST["nombre_proyecto"];
+$res=mysqli_query($link,"SELECT total_cat2 from grupos where nombre_proyecto = '$nombre_proyecto'");
+
+	while($row=mysqli_fetch_array($res))
+	{
+     $subtotal = $row["total_cat2"];
+
+  }   
 $s1=$_POST["s1"];
 $s2=$_POST["s2"];
 $s3=$_POST["s3"];
@@ -51,7 +52,7 @@ $s4=$_POST["s4"];
 $s5=$_POST["s5"];
 $s6=$_POST["s6"];
 $s7=$_POST["s7"];
-$total=$s1+$s2+$s3+$s4+$s5+$s6+$s7;
+$total=$subtotal+$s1+$s2+$s3+$s4+$s5+$s6+$s7;
 //echo $total;
 
 
@@ -72,7 +73,7 @@ echo "DATOS ENVIADOS CORRECTAMENTE";
 
  ?>
 <br><br>
-<input type="button" value="Regresar" onclick="window.location.href='../home/metodos.php'" />
+<input type="button" value="Regresar" onclick="window.location.href='../home/jurado_metodos.php'" />
 
 </div>
  </body>

@@ -213,14 +213,66 @@
 								</div>
 							</div>
 						</div>							
-						
+						<!-- Agregar Juez 1 -->
 						<div class="form-group">
 							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>   
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 									<select id="usr" name="usr" class="form-control">	
-											<option>Seleccione al Juez</option>
+											<option>Seleccione al Juez 1</option>
+										<?php
+										$res=mysqli_query($link,"SELECT * from jueces;");
+										while($row=mysqli_fetch_array($res))
+										{
+										?>
+
+											<option><?php echo $row ["usr"];?></option>
+
+										<?php	
+
+										}					
+										
+										?>							
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<!-- Agregar Juez 2 -->
+						<div class="form-group">
+							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>   
+							<div class="col-md-4 inputGroupContainer">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<select id="usr2" name="usr2" class="form-control">	
+											<option>Seleccione al Juez 2</option>
+										<?php
+										$res=mysqli_query($link,"SELECT * from jueces;");
+										while($row=mysqli_fetch_array($res))
+										{
+										?>
+
+											<option><?php echo $row ["usr"];?></option>
+
+										<?php	
+
+										}					
+										
+										?>							
+									</select>
+								</div>
+							</div>
+						</div>		
+
+						<!-- Agregar Juez 2 -->
+						<div class="form-group">
+							<a><label class="col-md-4 control-label">Usuario del Juez</label></a>   
+							<div class="col-md-4 inputGroupContainer">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<select id="usr3" name="usr3" class="form-control">	
+											<option>Seleccione al Juez 3</option>
 										<?php
 										$res=mysqli_query($link,"SELECT * from jueces;");
 										while($row=mysqli_fetch_array($res))
@@ -308,7 +360,9 @@
 					"&n3=" + $('#n3').val()+
 					"&n4=" + $('#n4').val()+
 					"&n5=" + $('#n5').val()+
-					"&usr=" + $('#usr').val();
+					"&usr=" + $('#usr').val()+
+					"&usr2=" + $('#usr2').val()+
+					"&usr3=" + $('#usr3').val();
 
 					$.ajax({
 						type:"POST",

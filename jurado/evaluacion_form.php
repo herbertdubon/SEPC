@@ -69,7 +69,7 @@
          <select name="nombre_proyecto" id="nombre_proyecto">
           <option>Seleccione el nombre del proyecto</option>
           <?php  
-          $res=mysqli_query($link,"SELECT * from grupos where total_cat4 = 0 and usr = '$varsesion' ");
+          $res=mysqli_query($link,"SELECT * from grupos where (usr = '$varsesion') or (usr2 = '$varsesion') or (usr3 = '$varsesion')");
                     while($row=mysqli_fetch_array($res))
                     {
                     ?>

@@ -10,9 +10,11 @@ $n3 = $_POST['n3'];
 $n4 = $_POST['n4'];
 $n5 = $_POST['n5'];
 $usr = $_POST['usr'];
+$usr2 = $_POST['usr2'];
+$usr3 = $_POST['usr3'];
 
 
-$insert = "INSERT INTO grupos (nombre_proyecto, categoria, n1, n2, n3, n4, n5, usr) VALUES ('$nproyecto','$nombrecat','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr');";
+$insert = "INSERT INTO grupos (nombre_proyecto, categoria, n1, n2, n3, n4, n5, usr, usr2, usr3) VALUES ('$nproyecto','$nombrecat','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr','$usr2','$usr3');";
 echo $insert;
 
 echo $result=mysqli_query($con,$insert);
