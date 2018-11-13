@@ -1,3 +1,5 @@
+
+
 <?php 
 	session_start();
 	$varsesion = $_SESSION['usr'];
@@ -7,19 +9,16 @@
 		echo 'Usted no tiene permiso de ver este contenido.';
 		die();
 	}
+
+	$link=mysqli_connect("localhost","root","");
+	mysqli_select_db($link,"proyecto")
  ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-<style type="text/css">
-			#chart-container {
-				width: 640px;
-				height: auto;
-			}
-		</style>
-	<title>SEPC UEES Dashboard</title>
+<title>SEPC UEES Dashboard</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -37,38 +36,40 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/uees.png">
+	<link rel="stylesheet" type="text/css" href="js/alertifyjs/css/themes/default.css">
+	<link rel="stylesheet" type="text/css" href="js/alertifyjs/css/alertify.css">	
 </head>
 
 <body>
 <!-- WRAPPER -->
-	<div id="wrapper">    
-		<!-- NAVBAR -->    
-		<nav class="navbar navbar-default navbar-fixed-top">			
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-fullwidth"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
-				</div>      
+				</div>
 				<form class="navbar-form navbar-left">
 					<div class="input-group">
 						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
-						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>            
-					</div>          
-        </form>    
+						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+					</div>
+        		</form>
         <form class="navbar-form navbar-left">
           <h4><span style="font-weight:bold">SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</span></h4>
 
         </form>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-					
-					
+
+
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr'];  ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr']; ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-							
+
 								<li><a href="../funciones/salir.php""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>						
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -133,7 +134,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="user" name="user" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
+									<input id="user" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
 						</div>
@@ -143,7 +144,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="nombre" name="nombre" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
+									<input id="nombre" name="njurado" placeholder="Ingresar Nombre..." class="form-control"  type="text" required>
 								</div>
 							</div>
 						</div>
@@ -155,7 +156,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<input id="pass" name="pass" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
+									<input id="pass" name="njurado" placeholder="Ingresar Contraseña..." class="form-control"  type="password" required>
 								</div>
 							</div>
 						</div>
@@ -231,12 +232,13 @@
 		<!-- END WRAPPER -->
 		<!-- Javascript -->
 		<script src="assets/vendor/jquery/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
 		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 		<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 		<script src="assets/vendor/chartist/js/chartist.min.js"></script>
 		<script src="assets/scripts/klorofil-common.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/alertifyjs/alertify.js"></script>	
 
 </body>
 

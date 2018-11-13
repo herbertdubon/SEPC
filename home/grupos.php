@@ -7,20 +7,16 @@
 		echo 'Usted no tiene permiso de ver este contenido.';
 		die();
 	}
+
+		$link=mysqli_connect("localhost","root","");
+		mysqli_select_db($link,"proyecto")
  ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
-<style type="text/css">
-			#chart-container {
-				width: 640px;
-				height: auto;
-			}
-		</style>
-	<title>SEPC UEES Dashboard</title>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- VENDOR CSS -->
@@ -37,11 +33,13 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/uees.png">
+	<link rel="stylesheet" type="text/css" href="js/alertifyjs/css/themes/default.css">
+	<link rel="stylesheet" type="text/css" href="js/alertifyjs/css/alertify.css">
 </head>
 
 <body>
 <!-- WRAPPER -->
-	<div id="wrapper">    
+<div id="wrapper">    
 		<!-- NAVBAR -->    
 		<nav class="navbar navbar-default navbar-fixed-top">			
 			<div class="container-fluid">
@@ -221,7 +219,7 @@
 							<div class="col-md-4 inputGroupContainer">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-									<select id="usr" class="form-control">	
+									<select id="usr" name="usr" class="form-control">	
 											<option>Seleccione al Juez</option>
 										<?php
 										$res=mysqli_query($link,"SELECT * from jueces;");
@@ -275,6 +273,8 @@
 		<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 		<script src="assets/vendor/chartist/js/chartist.min.js"></script>
 		<script src="assets/scripts/klorofil-common.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/alertifyjs/alertify.js"></script>	
 	
 </body>
 
@@ -318,7 +318,7 @@
 							if(r==1){
 								alertify.success("Agregado con exito");
 							}else{
-								alertify.success("Fallo al agregar");
+								alertify.error("Fallo al agregar");
 							}
 						}
 					});
