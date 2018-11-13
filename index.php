@@ -13,13 +13,23 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	
+
+
+
 </head>
 
+
 <body>
+<br>
+<h2 class="text-center text-white">SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</h2>
+
 
 
 <!-- Form-->
-<div class="form">
+<div class="form" class="col-xs-4">
   <div class="form-toggle"></div>
   <div class="form-panel one">
     <div class="form-header">
@@ -35,6 +45,7 @@
           <select name="cat" class="custom-select" id="inputGroupSelect01">
             <option selected>Escoja la categoría...</option>
             <option value="0">Admin</option>
+            <option value="">--------------------</option>
             <option value="Programacion">Programacion</option>
             <option value="Electronica">Electronica</option>
             <option value="Robotica">Robotica</option>
@@ -65,7 +76,7 @@
                     
       </form>
           <div class="form-group">
-          <input type="button" class="btn bg-success" value="Registrar Admin" onclick="location.href = 'registrar.php';">
+          <input type="button" class="btn bg-success" value="REGISTRAR ADMIN" onclick="location.href = 'registrar.php';">
           </div>
     </div>
   </div>

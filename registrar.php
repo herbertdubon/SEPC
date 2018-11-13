@@ -16,7 +16,8 @@
 </head>
 
 <body>
-
+<br>
+<h2 class="text-center text-white" >SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</h2>
 
 <!-- Form-->
 <div class="form">
@@ -29,7 +30,7 @@
       <form action="validaradm.php" method="post">
         <!-- Example split danger button -->
         
-          <div class="well span6" style="padding-top: 20px"></div>
+          <div class="well span6" style="padding-top: 0px"></div>
 
           <div class="form-group">
             <label for="username">Nombre</label>
@@ -49,6 +50,10 @@
 
           <div class="form-group">
             <button type="submit">Registrar</button>
+          </div>
+
+          <div class="form-group">
+          <input type="button" class="btn bg-warning" value="REGRESAR" onclick="location.href = 'index.php';">
           </div>
 
           <div class="well span6" style="padding-top: 10px"></div>
