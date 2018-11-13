@@ -1,5 +1,3 @@
-
-
 <?php 
 	session_start();
 	$varsesion = $_SESSION['usr'];
@@ -9,15 +7,18 @@
 		echo 'Usted no tiene permiso de ver este contenido.';
 		die();
 	}
-
-	$link=mysqli_connect("localhost","root","");
-	mysqli_select_db($link,"proyecto")
  ?>
 
 <!doctype html>
 <html lang="en">
 
 <head>
+<style type="text/css">
+			#chart-container {
+				width: 640px;
+				height: auto;
+			}
+		</style>
 	<title>SEPC UEES Dashboard</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -36,39 +37,38 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/uees.png">
-	<?php require_once "scripts.php"; ?>
 </head>
 
 <body>
 <!-- WRAPPER -->
-	<div id="wrapper">
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-fixed-top">
+	<div id="wrapper">    
+		<!-- NAVBAR -->    
+		<nav class="navbar navbar-default navbar-fixed-top">			
 			<div class="container-fluid">
 				<div class="navbar-btn">
 					<button type="button" class="btn-toggle-fullwidth"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
-				</div>
+				</div>      
 				<form class="navbar-form navbar-left">
 					<div class="input-group">
 						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
-						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
-					</div>
-        		</form>
+						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>            
+					</div>          
+        </form>    
         <form class="navbar-form navbar-left">
           <h4><span style="font-weight:bold">SISTEMA DE EVALUACION DE PROYECTOS DE CATEDRA FIUESS</span></h4>
 
         </form>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
-
-
+					
+					
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr']; ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-user" ></i><span>Bienvenido <?php echo $_SESSION['usr'];  ?></span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-
+							
 								<li><a href="../funciones/salir.php""><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
-						</li>
+						</li>						
 					</ul>
 				</div>
 			</div>
@@ -82,9 +82,9 @@
 						<li>
 						<a><img src="http://www.uees.edu.sv/wp-content/uploads/2017/06/logo140_37anos.png" alt="UEES Logo" class="img-responsive logo"></a>
 						</li>
-						<li><a href="dash.php" class="active"><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
+						<li><a href="dash.php" class=""><i class="fas fa-tachometer-alt"></i><span>Inicio</span></a></li>		
 						<li><a href="categorias.php" class=""><i class="fab fa-buromobelexperte"></i><span>Agregar Categorías</span></a></li>	
-						<li><a href="jurados.php" class=""><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
+						<li><a href="jurados.php" class="active"><i class="fas fa-gavel"></i> <span>Agregar Jurados</span></a></li>
 						<li><a href="grupos.php" class=""><i class="fas fa-users"></i> <span>Agregar Grupos</span></a></li>
 						<li>
 								<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fas fa-clipboard-check"></i> <span>Evaluacion Grupos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>

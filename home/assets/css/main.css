@@ -67,7 +67,7 @@ footer {
   width: 260px;
   height: 100%;
   float: left;
-  background-color: #2B333E;
+  background-color: #000;
   position: fixed;
   left: 0; }
 
@@ -166,7 +166,7 @@ html.fullscreen-bg #wrapper {
   padding: 0;
   margin: 0;
   border: none;
-  background-color: #fff; }
+  background-color: #000; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #fafafa; }
   .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -205,6 +205,7 @@ html.fullscreen-bg #wrapper {
 
 .navbar-form {
   padding: 15px;
+  color:yellow;
   border: 0; }
   .navbar-form input[type="text"] {
     min-width: 200px; }
@@ -364,7 +365,7 @@ ul.notifications > li {
     color: #AEB7C2;
     border-left: 5px solid transparent; }
     .sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
-      color: #fff;
+      color: yellow;
       background-color: transparent; }
       .sidebar .nav > li > a:hover i, .sidebar .nav > li > a:focus i, .sidebar .nav > li > a.active i {
         color: #00AAFF; }
