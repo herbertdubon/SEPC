@@ -47,9 +47,9 @@
             <option value="0">Admin</option>
             <option value="">--------------------</option>
             <option value="Programacion">Programacion</option>
-            <option value="Electronica">Electronica</option>
-            <option value="Robotica">Robotica</option>
-            <option value="Metodologia de la Investigacion">Metodologia de la Investigacion</option>
+            <option value="Electronica">Multidisciplinaria</option>
+            <option value="Robotica">Electronica y Robotica</option>
+            <option value="Robotica">Metodologia de la Investigacion</option>
           </select>
         </div>
 

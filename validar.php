@@ -34,14 +34,14 @@
 				header("location:home/jurado_innovacion.php");	
 			}
 
-		else if($cat == "Robotica")
+		else if($cat == "Multidisciplinaria")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
 				header("location:home/jurado_innovacion.php");	
 			}
 
-		else if($cat == "Electronica")
+		else if($cat == "Electronica y Robotica")
 			{
 				session_start();
 				$_SESSION ['usr'] = $usuario;
