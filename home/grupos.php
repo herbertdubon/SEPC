@@ -301,8 +301,8 @@
 				return false;
 			}
 
-			cadena="nproyecto=" + $('#nproyecto').val() +
-					"&nombrecat=" + $('#nombrecat').val() +
+			cadena="&nproyecto=" + $('#nproyecto').val() +
+					"&nombrecat=" + $('#nombrecat').val()+
 					"&n1=" + $('#n1').val()+
 					"&n2=" + $('#n2').val()+
 					"&n3=" + $('#n3').val()+

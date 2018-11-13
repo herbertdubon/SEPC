@@ -15,13 +15,6 @@ $insert = "INSERT INTO users (usr,  nombre, pass, CIF, nombre_categoria) VALUES 
 
  echo $result= mysqli_multi_query($con,$insert);
 
-
-
-
-
-
-
-
  ?>
 
 
