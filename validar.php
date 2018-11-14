@@ -53,10 +53,6 @@ if($data != null)
 			$_SESSION ['usr'] = $usuario;
 			header("location:home/jurado_metodos.php");	
 		}
-
-	
-		
-	
 	  
 }
 else

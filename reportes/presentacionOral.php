@@ -15,7 +15,7 @@
         
         die($ex->getMessage());
     }
-    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat5>0 and categoria='Robotica' ORDER BY total_cat5 DESC;");
+    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat2>0 and categoria='Metodologia de la Investigacion' ORDER BY total_cat2 DESC;");
     $stmt->execute();
     $json= [];
     $json2= [];
@@ -68,7 +68,7 @@ li {
 <div class="col l2 m4 s6">
     <ul>
         <li>
-            <h1>Resultados de Robotica</h1>
+            <h1>Resultados de Presentacion Oral</h1>
                 <div style="width: 800px; height: 400px;">
                 <canvas id="myChart"></canvas>
                 </div>
@@ -86,11 +86,11 @@ li {
                         labels: <?php echo json_encode($json); ?>,
                         datasets: [{
                             label: "Total de la categoria",
-                            backgroundColor: 'purple',
+                            backgroundColor: 'blue',
                             borderColor: 'red',
                             hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
                             hoverBorderColor: 'rgba(200, 200, 200, 1)',
-                            data: <?php echo json_encode($json6); ?>,
+                            data: <?php echo json_encode($json3); ?>,
                         }]
                     },
 

@@ -80,6 +80,7 @@
 		</nav>
 		<!-- END NAVBAR -->
 		<!-- LEFT SIDEBAR -->
+		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar">
 			<div class="sidebar-scroll">
 				<nav>
@@ -97,23 +98,34 @@
 									<ul class="nav">
 										<li><a href="../jurado/innovacion_form.php"><i class="far fa-check-square"></i>Innovacion</a></li>									
 										<li><a href="../jurado/evaluacion_form.php"><i class="far fa-check-square"></i>Presentación Escrita Documento Completo</a></li>
-										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
-										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
+										<li><a href="../jurado/EvPresentacionOral_form.php"><i class="far fa-check-square"></i>Presentación Oral</a></li>
+										<li><a href="../jurado/EvPoster_form.php"><i class="far fa-check-square"></i>Poster Científico</a></li>									
 									</ul>
 								</div>
 						</li>
 						<li>
-								<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="fas fa-chart-bar"></i> <span>Reportes</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<a href="#subPages2" data-toggle="collapse" class="collapsed"><i class="fas fa-chart-bar"></i> <span>Reportes Innovacion</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 								<div id="subPages2" class="collapse ">
 									<ul class="nav">
-										<li><a href="programacion.php"><i class="fas fa-chart-bar"></i>Programacion</a></li>	
-										<li><a href="presentacionEscrita.php"><i class="fas fa-chart-bar"></i>Presentación Escrita Documento Completo</a></li>	
-										<li><a href="presentacionOral.php"><i class="fas fa-chart-bar"></i>Presentación Oral</a></li>	
-										<li><a href="posterCientifico.php"><i class="fas fa-chart-bar"></i>Poster Científico</a></li>									
+										<li><a href="programacion.php"><i class="fas fa-chart-bar"></i>Programacion</a></li>									
+										<li><a href="roboticaElectronica.php"><i class="fas fa-chart-bar"></i>Robótica yElectrónica</a></li>	
+										<li><a href="multidisciplinaria.php"><i class="fas fa-chart-bar"></i>Multidisciplinaria</a></li>									
 																		
 									</ul>
 								</div>
-						</li>					
+						</li>	
+						<li>
+								<a href="#subPages3" data-toggle="collapse" class="collapsed"><i class="fas fa-chart-bar"></i> <span>Reportes Métodos</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+								<div id="subPages3" class="collapse ">
+									<ul class="nav">										
+										<li><a href="presentacionEscrita.php"><i class="fas fa-chart-bar"></i>Presentación Escrita</a></li>	
+										<li><a href="presentacionOral.php"><i class="fas fa-chart-bar"></i>Presentación Oral</a></li>	
+										<li><a href="posterCientifico.php"><i class="fas fa-chart-bar"></i>Póster Científico</a></li>									
+																		
+									</ul>
+								</div>
+						</li>	
+										
 					</ul>
 				</nav>
 			</div>
@@ -125,7 +137,7 @@
 			<!-- MAIN CONTENT -->
 			<div id="chart-container">
 
-				<iframe width="1400" height="515" src="../reportes/presentacionEscrita.php" frameborder="0" ></iframe>
+				<iframe width="1020" height="600" src="../reportes/presentacionEscrita.php" frameborder="0" ></iframe>
 			
 			</div>
 

@@ -43,7 +43,6 @@ $res=mysqli_query($link,"SELECT total_cat3 from grupos where nombre_proyecto = '
 	while($row=mysqli_fetch_array($res))
 	{
      $subtotal = $row["total_cat3"];
-
   }   
 $s1=$_POST["s1"];
 $s2=$_POST["s2"];

@@ -15,7 +15,7 @@
         
         die($ex->getMessage());
     }
-    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat5>0 and categoria='Electronica' ORDER BY total_cat5 DESC;");
+    $stmt=$dbcon->prepare("SELECT * FROM grupos where total_cat5>0 and categoria='Robotica y Electronica' ORDER BY total_cat5 DESC;");
     $stmt->execute();
     $json= [];
     $json2= [];
@@ -72,7 +72,7 @@ li {
 <div class="col l2 m4 s6" >
     <ul>
         <li>
-            <h1>Resultados de Electrónica</h1>
+            <h1>Resultados de Robotica y Electrónica</h1>
                 <div style="width: 800px; height: 400px;">
                 <canvas id="myChart"></canvas>
                 </div>

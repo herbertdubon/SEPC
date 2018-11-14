@@ -13,9 +13,14 @@ $usr = $_POST['usr'];
 $usr2 = $_POST['usr2'];
 $usr3 = $_POST['usr3'];
 
-
-$insert = "INSERT INTO grupos (nombre_proyecto, categoria, n1, n2, n3, n4, n5, usr, usr2, usr3) VALUES ('$nproyecto','$nombrecat','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr','$usr2','$usr3');";
+if($usr3=="Seleccion al Juez 3"){
+$insert = "INSERT INTO grupos (nombre_proyecto, categoria, n1, n2, n3, n4, n5, usr, usr2, usr3) VALUES ('$nproyecto','$nombrecat','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr','$usr2','');";
 echo $insert;
-
 echo $result=mysqli_query($con,$insert);
-  
+}
+else{
+    $insert = "INSERT INTO grupos (nombre_proyecto, categoria, n1, n2, n3, n4, n5, usr, usr2, usr3) VALUES ('$nproyecto','$nombrecat','$n1','$n2' ,'$n3' ,'$n4' ,'$n5' ,'$usr','$usr2','$usr3');";
+    echo $insert;
+    echo $result=mysqli_query($con,$insert);
+}
+?>
